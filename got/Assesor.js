@@ -1,4 +1,4 @@
-import Personaje from "./Personajes";
+import Personaje from "./Personajes.js";
 
 class Assesor extends Personaje {
   personajeAlQueAssesora;
@@ -21,3 +21,5 @@ class Assesor extends Personaje {
     );
   }
 }
+
+export default Assesor;

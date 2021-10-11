@@ -1,9 +1,6 @@
-import Personaje from "./Personajes";
+import Personaje from "./Personajes.js";
 
 class Escudero extends Personaje {
-  static personajeAlQueSirve = {
-    PERSONAJE_AL_QUE_SIRVE: "sirve a luchador",
-  };
   static gradoPelotismo = {
     0: "grado 0",
     1: "grado 1",
@@ -27,3 +24,4 @@ class Escudero extends Personaje {
     return super.comunicar() + " soy un loser.";
   }
 }
+export default Escudero;
