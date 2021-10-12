@@ -3,6 +3,7 @@ import Rey from "./got/Rey.js";
 import Assesor from "./got/Assesor.js";
 import Luchador from "./got/Luchador.js";
 import Escudero from "./got/Escudero.js";
+import Component from "./got/Component.js";
 
 // const card = document.getElementsByClassName("character col");
 // const cln = card[0].cloneNode(true);
@@ -30,21 +31,17 @@ const tyrion = new Assesor(
   "Tyrion",
   Personaje.familia.TARGARYEN,
   true,
-  Assesor.personajeAlQueAssesora
+  Assesor.personajeAlQueAssesoraL
 );
 
-const bronn = new Escudero("Bronn", Personaje.familia.TARGARYEN, true, jamie);
-const characters = [joffrey, jamie, daenerys, tyrion, bronn];
+// const bronn = new Escudero("Bronn", Personaje.familia.TARGARYEN, true, jamie);
+// const characters = [joffrey, jamie, daenerys, tyrion, bronn];
 
-const setPicture = (img) => {
-  const characterPhoto = document.querySelector(".character__picture");
-  characterPhoto.src = img;
-};
+// const addCharacterName = (personaje) => {
+//   const characterName = document.querySelector(".character__name");
+//   characterName.textContent = `${personaje.nombre} ${personaje.familia}`;
+// };
 
-const addCharacterName = (personaje) => {
-  const characterName = document.querySelector(".character__name");
-  characterName.textContent = `${personaje.nombre} ${personaje.familia}`;
-};
+// addCharacterName(joffrey);
 
-addCharacterName(joffrey);
-// document.querySelector(".character__name").innerHTML = "ee";
+c = new Component("character col", "card character__card", "div");
