@@ -32,6 +32,8 @@ class Personaje {
   morir() {
     this.estado = !this.estado;
   }
+
+  createHtml() {}
 }
 
 export default Personaje;
