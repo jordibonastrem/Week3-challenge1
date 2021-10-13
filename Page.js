@@ -1,12 +1,17 @@
+import Components from "./Component.js";
+
 class Page {
   mainDiv;
   personajes;
   comunications;
   list;
 
-  constructor() {
+  constructor(personajes) {
+    this.personajes = personajes;
     this.createMainDiv();
     this.createList();
+    this.createComunications();
+    this.createCards();
   }
 
   createMainDiv() {
@@ -26,4 +31,12 @@ class Page {
     this.comunications.className = "comunications";
     document.body.appendChild(this.comunications);
   }
+
+  createCards() {
+    this.personajes.forEach((personaje) => {
+      new Components(personaje, this.list);
+    });
+  }
 }
+
+export default Page;

@@ -3,7 +3,8 @@ import Rey from "./got/Rey.js";
 import Assesor from "./got/Assesor.js";
 import Luchador from "./got/Luchador.js";
 import Escudero from "./got/Escudero.js";
-import Component from "./got/Component.js";
+import Page from "./Page.js";
+import Components from "./Component.js";
 
 // const card = document.getElementsByClassName("character col");
 // const cln = card[0].cloneNode(true);
@@ -34,8 +35,8 @@ const tyrion = new Assesor(
   Assesor.personajeAlQueAssesoraL
 );
 
-// const bronn = new Escudero("Bronn", Personaje.familia.TARGARYEN, true, jamie);
-// const characters = [joffrey, jamie, daenerys, tyrion, bronn];
+const bronn = new Escudero("Bronn", Personaje.familia.TARGARYEN, true, jamie);
+const characters = [joffrey, jamie, daenerys, tyrion, bronn];
 
 // const addCharacterName = (personaje) => {
 //   const characterName = document.querySelector(".character__name");
@@ -44,4 +45,5 @@ const tyrion = new Assesor(
 
 // addCharacterName(joffrey);
 
-c = new Component("character col", "card character__card", "div");
+// c = new Component("character col", "card character__card", "div");
+const page = new Page(characters);
