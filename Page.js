@@ -4,9 +4,11 @@ class Page {
   comunications;
   list;
 
-  constructor() {
+  constructor(personajes) {
+    this.personajes = personajes;
     this.createMainDiv();
     this.createList();
+    this.createComunications();
   }
 
   createMainDiv() {
@@ -27,3 +29,5 @@ class Page {
     document.body.appendChild(this.comunications);
   }
 }
+
+export default Page;
