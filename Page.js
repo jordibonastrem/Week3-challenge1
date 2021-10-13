@@ -1,61 +1,29 @@
-class Page{
-    element;
-    parentElement;
+class Page {
+  mainDiv;
+  personajes;
+  comunications;
+  list;
 
-  constructor(parentElement, className, htmlTag = "div"){
-        this.element = document.createElement(htmlTag);
-    this.element.className = className;
-    this.parentElement = parentElement;
-
-    this.parentElement.append(this.element);
-    this.generateHTML();
+  constructor() {
+    this.createMainDiv();
+    this.createList();
   }
 
-  generateHTML() {
-    const html = `<div class="card character__card">
-            <img
-              src=""
-              alt=""
-              class="character__picture card-img-top"
-            />
-            <div class="card-body">
-              <h2 class="character__name card-title h4">
-                Nombre y Familia
-              </h2>
-              <div class="character__info">
-                <ul class="list-unstyled">
-                  <li>Edad:</li>
-                  <li>
-                    Estado:Vivo
-                    <i class="fas fa-thumbs-down"></i>
-                    <i class="fas fa-thumbs-up"></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="character__overlay">
-                <ul class="list-unstyled">
-                  <li>Años de reinado:</li>
-                  <li>Arma:</li>
-                  <li>Destreza:</li>
-                  <li>Peloteo:</li>
-                  <li>Asesora a:</li>
-                  <li>Sirve a:</li>
-                </ul>
-                <div class="character__actions">
-                  <button class="character__action btn">habla</button>
-                  <button
-                    type="button"
-                 
-                    
-                    class="character__action btn"
-                  >
-                    muere
-                  </button>
-                </div>
-              </div>
-            </div>
-            <i class="emoji"></i>
-          </div>`;
-    this.element.innerHTML = html;
+  createMainDiv() {
+    this.mainDiv = document.createElement("div");
+    this.mainDiv.className = "app container";
+    document.body.append(this.mainDiv);
+  }
 
+  createList() {
+    this.list = document.createElement("ul");
+    this.list.className = "characters-list row list-unstyledr";
+    this.mainDiv.appendChild(this.list);
+  }
+
+  createComunications() {
+    this.comunications = document.createElement("div");
+    this.comunications.className = "comunications";
+    document.body.appendChild(this.comunications);
+  }
 }
