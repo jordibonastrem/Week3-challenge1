@@ -1,3 +1,5 @@
+import Components from "./Component.js";
+
 class Page {
   mainDiv;
   personajes;
@@ -9,6 +11,7 @@ class Page {
     this.createMainDiv();
     this.createList();
     this.createComunications();
+    this.createCards();
   }
 
   createMainDiv() {
@@ -27,6 +30,12 @@ class Page {
     this.comunications = document.createElement("div");
     this.comunications.className = "comunications";
     document.body.appendChild(this.comunications);
+  }
+
+  createCards() {
+    this.personajes.forEach((personaje) => {
+      new Components(personaje, this.list);
+    });
   }
 }
 

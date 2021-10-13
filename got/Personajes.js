@@ -1,6 +1,8 @@
 class Personaje {
   serie = "Juego de Tronos";
   nombre;
+  edad;
+  familia;
   static familia = {
     ARRYN: "casa arryn",
     TRULLY: "casa trully",
@@ -19,9 +21,10 @@ class Personaje {
     ESCUDERO: "es un escudero",
   };
   estado = true;
-  constructor(nombre, familia, estado) {
+  constructor(nombre, familia, edad, estado) {
     this.nombre = nombre;
     this.familia = familia;
+    this.edad = edad;
     this.estado = estado;
   }
 
